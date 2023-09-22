@@ -15,6 +15,10 @@
 
 */
 
+
+std::string VERSION = "v1.0.1";
+
+
 using namespace oscium;
 WiPryClarity* wipryClarity = nullptr;
 
@@ -210,9 +214,13 @@ void sig_handler (int param)
 
 
 void helptext() {
+        std::cout << "Outputs Oscium WiPry spectrum analysis data in Influx Line Protocol format" << std::endl;
+        std::cout << std::endl;
 	std::cout << "Usage:" << std::endl;
 	std::cout << std::endl;
-
+        std::cout << "    wipry-lp -[2|5|6]" << std::endl;
+        std::cout << std::endl;
+        std::cout << "Options:" << std::endl;
 	std::cout << "	-2		Run on the 2.4GHz Band" << std::endl;
 	std::cout << "	-5		Run on the 5GHz Band" << std::endl;
 	std::cout << "	-6		Run on the 6GHz Band" << std::endl;
@@ -225,7 +233,9 @@ void helptext() {
         std::cout << std::endl;
         std::cout << std::endl;
         std::cout << "Built by Bryan Ward, based on sample code graciously provided by Matt Lee from Oscium" << std::endl;
-        std::cout << "Build Date " << __BUILDTIMESTAMP__ << std::endl;
+        std::cout << "wipry-lp Version " << VERSION << std::endl;
+        //std::cout << "Build Date " << __BUILDTIMESTAMP__ << std::endl;
+        std::cout << "libWiPryClarity version " << oscium::WiPryClarity::getVersion() << std::endl;
         std::cout << "Copyright (c) 2023 Matt Lee and Bryan Ward" << std::endl;
 }
 
