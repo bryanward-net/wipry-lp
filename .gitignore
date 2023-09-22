@@ -24,6 +24,7 @@
 *.lai
 *.la
 *.a
+!libWiPryClarity.a
 *.lib
 
 # Executables
