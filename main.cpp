@@ -16,7 +16,7 @@
 */
 
 
-std::string VERSION = "v1.0.1";
+std::string VERSION = "v1.1.0";
 
 
 using namespace oscium;
